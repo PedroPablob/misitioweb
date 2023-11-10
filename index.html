@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mi Página de Presentación</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Alegreya&display=swap');
+
+        body {
+            font-family: 'Alegreya', serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('6.jpg');
+            background-size: cover;
+        }
+        .container {
+            position: absolute;
+            left: 5%; /* Separación del borde izquierdo */
+            bottom: 0; /* Pegado al borde inferior */
+            width: 60%; /* Ancho del cuadrado */
+            height: 120%; /* Altura del cuadrado */
+            background-color: rgba(255, 255, 255, 0.8); /* Blanco con un poco de transparencia */
+            padding: 0; /* Eliminamos el padding */
+        }
+        .container::before {
+            content: "PEDRO PABLO BELTRAN SILVA";
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%; /* Ancho de la franja */
+            height: 40%; /* Altura de la franja */
+            background-image: url('7.jpg'); /* Imagen de fondo */
+            background-size: ; /* Hace que la imagen de fondo cubra todo el espacio disponible */
+            margin-bottom: 20px; /* Separación con el contenido */
+            color: #000000; /* Cambiamos el color del texto a negro */
+            font-size: 2em; /* Aumentamos el tamaño del texto */
+            text-shadow: 2px 2px 4px #FFFFFF; /* Añadimos sombra al texto */
+        }
+        .content {
+            padding: 20px; /* Añadimos padding al contenido */
+        }
+        h1 {
+            color: #000000;
+        }
+        p {
+            color: #000000;
+        }
+        .apartados {
+            display: flex; /* Los apartados se muestran en fila */
+            justify-content: space-between; /* Los apartados tienen el mismo espacio entre ellos */
+        }
+        .apartado {
+            width: 30%; /* Ancho de cada apartado */
+        }
+        .apartado a {
+            color: #000000; /* Cambiamos el color del texto a negro */
+            text-decoration: none; /* Eliminamos el subrayado */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <h1>¡Hola!</h1>
+            <p>¡Bienvenido a mi página de presentación! Aquí podrás conocer más sobre mí y mi trabajo,
+                Mi nombre es Pedro Pablo Beltran Silva, nací un 25 de diciembre de 2005 e ingresé a la carrera de Diseño el año 2023. Estoy cursando actualmente Imagen Escrita en mi segundo semestre. Formo parte del taller del habitar. 
+                Este sitio es una muestra de mis trabajos a lo largo del semestre, mi viaje de aprendizaje a la Programación.
+                :D
+            </p>
+            <div class="apartados">
+                <div class="apartado">
+                    <h2><a href="https://github.com/PedroPablob" target="_blank">Código Fuente</a></h2>
+                    <!-- Aquí puedes añadir información sobre tu código fuente -->
+                </div>
+                <div class="apartado">
+                    <h2><a href="https://pedropablob.github.io/Repositorio-Pedro-Pablo-Beltran-Silva/" target="_blank">¡IR A LAS TAREAS!</a></h2>
+                    <!-- Aquí puedes añadir enlaces a tus tareas -->
+                </div>
+                <div class="apartado">
+                    <h2><a href="https://www.instagram.com/ciantastico/" target="_blank">Mis Redes Sociales</a></h2>
+                    <!-- Aquí puedes añadir enlaces a tus redes sociales -->
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
