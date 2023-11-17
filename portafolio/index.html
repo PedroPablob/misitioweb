@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mi Página de Presentación</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Alegreya&display=swap');
+
+        body {
+            font-family: 'Alegreya', serif;
+            margin: 0;
+            padding: 0;
+            overflow: auto; /* Agrega una barra de desplazamiento cuando sea necesario */
+        }
+
+        #gif-background {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -100;
+        }
+
+        .container {
+            position: absolute;
+            left: 5%; /* Separación del borde izquierdo */
+            bottom: 0%; /* Pegado al borde inferior */
+            width: 60%; /* Ancho del cuadrado */
+            height: auto; /* Altura del cuadrado se ajusta automáticamente al contenido */
+            background-color: rgba(255, 255, 255, 0.8); /* Blanco con un poco de transparencia */
+            padding: 0; /* Eliminamos el padding */
+        }
+        .container::before {
+            content: "PEDRO PABLO BELTRAN SILVA";
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 90%; /* Ancho de la franja */
+            height: 42%; /* Altura de la franja */
+            background-image: url('7.jpg'); /* Imagen de fondo */
+            background-size: ; /* Hace que la imagen de fondo cubra todo el espacio disponible */
+            margin-bottom: 0px; /* Eliminamos la separación con el contenido */
+            margin-top: 0px; /* Eliminamos el margen superior */
+            color: #000000; /* Cambiamos el color del texto a negro */
+            font-size: 2em; /* Aumentamos el tamaño del texto */
+            text-shadow: 2px 2px 4px #ffffff; /* Añadimos sombra al texto */
+        }
+        .content {
+            padding: 20px; /* Añadimos padding al contenido */
+        }
+        h1 {
+            color: #000000;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        h1 img {
+            width: 160px;
+            height: 160px;
+            margin-left: 10px;
+        }
+        p {
+            color: #000000;
+        }
+        .apartados {
+            display: flex; /* Los apartados se muestran en fila */
+            justify-content: space-between; /* Los apartados tienen el mismo espacio entre ellos */
+        }
+        .apartado {
+            width: 30%; /* Ancho de cada apartado */
+        }
+        .apartado a {
+            color: rgb(182, 182, 2); /* Cambiamos el color del texto a amarillo */
+            text-decoration: none; /* Eliminamos el subrayado */
+            opacity: 1; /* Aseguramos que el enlace sea completamente opaco */
+            text-shadow: 0 0 5px #FFFF00, 0 0 10px #ffff00da, 0 0 15px #FFFF00, 0 0 20px #FFFF00; /* Añadimos un efecto brillante */
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 5px #FFFF00, 0 0 10px #ffff00da, 0 0 15px #FFFF00, 0 0 20px #FFFF00;
+            }
+            to {
+                text-shadow: 0 0 10px #FFFF00, 0 0 20px #ffff00da, 0 0 30px #FFFF00, 0 0 40px #FFFF00;
+            }
+        }
+
+        /* Media query para pantallas de tamaño medio (tablets, etc.) */
+        @media only screen and (max-width: 768px) {
+            .container {
+                width: 80%; /* Ajusta el ancho del contenedor */
+                height: 100%; /* Ajusta la altura del contenedor */
+            }
+            .apartado {
+                width: 100%; /* Ajusta el ancho de cada apartado */
+            }
+        }
+
+        /* Media query para pantallas pequeñas (teléfonos móviles, etc.) */
+        @media only screen and (max-width: 480px) {
+            .container {
+                width: 100%; /* Ajusta el ancho del contenedor */
+                height: 100%; /* Ajusta la altura del contenedor */
+            }
+            .apartado {
+                width: 100%; /* Ajusta el ancho de cada apartado */
+            }
+        }
+    </style>
+</head>
+<body>
+    <img src="tuGif.gif" alt="GIF de fondo" id="gif-background" style="position:fixed; top:0; left:0; min-width:100%; min-height:100%;" loop autoplay>
+    <div class="container">
+        <div class="content">
+            <h1>¡Hola!<img src="8.png" alt="Foto"></h1>
+            <p>¡Bienvenido a mi página de presentación! Aquí podrás conocer más sobre mí y mi trabajo,
+                Mi nombre es Pedro Pablo Beltran Silva, nací un 25 de diciembre de 2005 e ingresé a la carrera de Diseño el año 2023. Estoy cursando actualmente Imagen Escrita en mi segundo semestre. Formo parte del taller del Habitar. 
+                Este sitio es una muestra de mis trabajos a lo largo del semestre, mi viaje de aprendizaje a la Programación.
+                :D
+            </p>
+            <div class="apartados">
+                <div class="apartado">
+                    <h2><a href="https://github.com/PedroPablob" target="_blank">Código Fuente</a></h2>
+                    <!-- Aquí puedes añadir información sobre tu código fuente -->
+                </div>
+                <div class="apartado">
+                    <h2><a href="#" onclick="document.getElementById('portfolio-frame').src='https://PedroPablob.github.io/Repositorio-Pedro-Pablo-Beltran-Silva/portafolio/index.html'; return false;">¡IR A LAS TAREAS!</a></h2>
+                    <!-- Aquí puedes añadir enlaces a tus tareas -->
+                </div>
+                <div class="apartado">
+                    <h2><a href="https://www.instagram.com/ciantastico/" target="_blank">Mis Redes Sociales</a></h2>
+                    <!-- Aquí puedes añadir enlaces a tus redes sociales -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <iframe id="portfolio-frame" style="width:100%; height:100%; border:none;"></iframe>
+    <!-- Asegúrate de reemplazar '7.mp4' con la ruta al archivo de video que quieras usar -->
+    <video autoplay loop muted>
+        <source src="7.mp4" type="video/mp4">
+    </video>
+    <div class="header">
+        <h1>Portafolio de Pedro Pablo Beltran Silva</h1>
+        <p><a href="https://wiki.ead.pucv.cl/Pedro_Beltr%C3%A1n" target="_blank">Más sobre mis proyectos de Diseño</a></p>
+    </div>
+    <div class="gallery">
+       <a href="https://pedropablob.github.io/tarea2/" target="_blank">
+           <div class="image-container">
+               <img src="2.jpg" alt="Descripción de la imagen 1">
+               <div class="hover-text">Se lee y ve el trabajo de Casey Reas, y se experimenta con Formas, y Comportamientos de los elementos.</div>
+           </div>
+           <p class="image-text">Comportamiento de las formas</p>
+       </a>
+       <a href="https://pedropablob.github.io/Timbre-Tarea-3/" target="_blank">
+           <div class="image-container">
+               <img src="3.jpg" alt="Descripción de la imagen 2">
+               <div class="hover-text">Se crea un timbre digital que juega con los colores y uniones en tonos verdosos</div>
+           </div>
+           <p class="image-text">Timbre</p>
+       </a>
+       <a href="https://pedropablob.github.io/tarea-4/" target="_blank">
+           <div class="image-container">
+               <img src="4.jpg" alt="Descripción de la imagen 3">
+               <div class="hover-text">Ejercicio de Recursión tomando como base el crecimiento de un árbol</div>
+           </div>
+           <p class="image-text">Recursión  de un árbol</p>
+       </a>
+   </div>
+   <div class="gallery">
+       <a href="https://pedropablob.github.io/tarea-5/" target="_blank">
+        <div class="image-container">
+            <img src="5.jpg" alt="Descripción de la imagen 4">
+            <div class="hover-text">Uso de efectos de particulas y noise para crear una simulacion de fuegos artificiales</div>
+        </div>
+        <p class="image-text">Fuegos artificiales</p>
+    </a>
+    <a href="https://pedropablob.github.io/Tarea-6/" target="_blank">
+        <div class="image-container">
+            <img src="6.jpg" alt="Descripción de la imagen 5">
+            <div class="hover-text">Ejercicio de blendmode, se crea un ejercicio de color y lineas aleatorios que se genera infinitamente</div>
+        </div>
+        <p class="image-text">Partículas </p>
+    </a>
+    <a href="https://pedropablob.github.io/Tarea-7/" target="_blank">
+        <div class="image-container">
+            <img src="7.jpg" alt="Descripción de la imagen 6">
+            <div class="hover-text">Juego con el color y la forma, espirales que se generan en distintos grados de forma y velocidad que dejan un trazo</div>
+        </div>
+        <p class="image-text">Círculos sensibles al color</p>
+    </a>
+</div>
+<div class="gallery">
+    <a href="https://pedropablob.github.io/Tarea-8/" target="_blank">
+        <div class="image-container">
+            <img src="1.png" alt="Descripción de la imagen 7">
+            <div class="hover-text">Un ejercicio libre, el primer encargo dado, el como se detecta los movimientos del mouse y como este interactua</div>
+        </div>
+        <p class="image-text">Seguir y interactuar</p>
+    </a>
+</div>
+</body>
+</html>
