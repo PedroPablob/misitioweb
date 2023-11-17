@@ -1,5 +1,5 @@
 Portafolio de Pedro Pablo Beltran Silva
-Este portafolio web fue creado para mostrar los proyectos de diseño de Pedro Pablo Beltran Silva. La página web tiene un diseño atractivo y moderno, con un fondo de video o GIF que se extiende por toda la pantalla.
+Este portafolio web fue creado para mostrar los proyectos de diseño de IE. La página web tiene un diseño atractivo y moderno, con un fondo de video o GIF que se extiende por toda la pantalla.
 
 Características
 Fondo de video/GIF: La página web utiliza un video o un GIF como fondo que se extiende por toda la pantalla para crear un efecto visual atractivo.
