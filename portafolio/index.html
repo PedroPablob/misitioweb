@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* Asegúrate de que el video de fondo se extienda por toda la pantalla y se reproduzca en bucle */
+        video {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%; 
+            min-height: 100%;
+            z-index: -1; /* Asegúrate de que el video quede detrás del contenido de la página */
+            opacity: 0.88; /* Ajusta la opacidad al valor que prefieras */
+        }
+        body {
+            background-color: black;
+            color: white;
+            font-family: 'Alegreya', serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding-top: 20px;
+        }
+        h1 {
+            font-size: 38px;
+            font-weight: lighter;
+            color: black;
+        }
+        p {
+            font-size: 14px;
+            font-weight: lighter;
+            color: black;
+        }
+        .header {
+            background-color: rgba(255, 255, 255, 0.5);
+            padding: 20px;
+            margin-bottom: 20px;
+            width: 100%;
+            text-align: center;
+        }
+        a {
+            color: white;
+            text-decoration: none;
+        }
+        .gallery {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            flex-wrap: wrap; /* Permite que los elementos de la galería se ajusten al tamaño de la pantalla */
+        }
+        .image-text {
+            text-align: center;
+            color: white;
+        }
+        .image-container {
+            position: relative;
+            margin: 10px; /* Añade un margen para separar las imágenes cuando la pantalla es pequeña */
+        }
+        .image-container img {
+            width: 300px;
+            height: auto;
+        }
+        .image-container .hover-text {
+            position: absolute;
+            top: 0; 
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .image-container:hover .hover-text {
+            opacity: 1;
+        }
+        /* Añade esto para hacer que las imágenes sean más pequeñas en pantallas pequeñas */
+        @media (max-width: 600px) {
+            .image-container img {
+                width: 100%;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Asegúrate de reemplazar '7.mp4' con la ruta al archivo de video que quieras usar -->
+    <video autoplay loop muted>
+        <source src="7.mp4" type="video/mp4">
+    </video>
+    <div class="header">
+        <h1>Portafolio de Pedro Pablo Beltran Silva</h1>
+        <p><a href="https://wiki.ead.pucv.cl/Pedro_Beltr%C3%A1n" target="_blank">Más sobre mis proyectos de Diseño</a></p>
+    </div>
+    <div class="gallery">
+       <a href="https://pedropablob.github.io/tarea2/" target="_blank">
+           <div class="image-container">
+               <img src="2.jpg" alt="Descripción de la imagen 1">
+               <div class="hover-text">Se lee y ve el trabajo de Casey Reas, y se experimenta con Formas, y Comportamientos de los elementos.</div>
+           </div>
+           <p class="image-text">Comportamiento de las formas</p>
+       </a>
+       <a href="https://pedropablob.github.io/Timbre-Tarea-3/" target="_blank">
+           <div class="image-container">
+               <img src="3.jpg" alt="Descripción de la imagen 2">
+               <div class="hover-text">Se crea un timbre digital que juega con los colores y uniones en tonos verdosos</div>
+           </div>
+           <p class="image-text">Timbre</p>
+       </a>
+       <a href="https://pedropablob.github.io/tarea-4/" target="_blank">
+           <div class="image-container">
+               <img src="4.jpg" alt="Descripción de la imagen 3">
+               <div class="hover-text">Ejercicio de Recursión tomando como base el crecimiento de un árbol</div>
+           </div>
+           <p class="image-text">Recursión  de un árbol</p>
+       </a>
+   </div>
+   <div class="gallery">
+       <a href="https://pedropablob.github.io/tarea-5/" target="_blank">
+           <div class="image-container">
+               <img src="5.jpg" alt="Descripción de la imagen 4">
+               <div class="hover-text">Uso de efectos de particulas y noise para crear una simulacion de fuegos artificiales</div>
+           </div>
+           <p class="image-text">Fuegos artificiales</p>
+       </a>
+       <a href="https://pedropablob.github.io/Tarea-6/" target="_blank">
+           <div class="image-container">
+               <img src="6.jpg" alt="Descripción de la imagen 5">
+               <div class="hover-text">Ejercicio de blendmode, se crea un ejercicio de color y lineas aleatorios que se genera infinitamente</div>
+           </div>
+           <p class="image-text">Partículas </p>
+       </a>
+       <a href="https://pedropablob.github.io/Tarea-7/" target="_blank">
+           <div class="image-container">
+               <img src="7.jpg" alt="Descripción de la imagen 6">
+               <div class="hover-text">Juego con el color y la forma, espirales que se generan en distintos grados de forma y velocidad que dejan un trazo</div>
+           </div>
+           <p class="image-text">Círculos sensibles al color</p>
+       </a>
+   </div>
+   <div class="gallery">
+       <a href="https://pedropablob.github.io/Tarea-8/" target="_blank">
+           <div class="image-container">
+               <img src="1.png" alt="Descripción de la imagen 7">
+               <div class="hover-text">Un ejercicio libre, el primer encargo dado, el como se detecta los movimientos del mouse y como este interactua</div>
+           </div>
+           <p class="image-text">Seguir y interactuar</p>
+       </a>
+   </div>
+</body>
+</html>
